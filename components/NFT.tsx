@@ -56,8 +56,14 @@ export default function NFTComponent({ nft }: Props) {
       <Text fontSize={'small'} color={'darkred'}>
         Owner: {nft.owner.slice(0, 6)}...{nft.owner.slice(-4)}
       </Text>
-      <Text fontSize={'small'} color={'darkgray'}>
-        description : {nft.metadata.description}
+      <Text
+        fontSize={'small'}
+        color={'darkgray'}
+        overflow="hidden"
+        whiteSpace="nowrap"
+        textOverflow="ellipsis"
+      >
+        description: {nft.metadata.description}
       </Text>
 
       <Box>

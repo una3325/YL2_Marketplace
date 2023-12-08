@@ -60,7 +60,7 @@ const TeamMemberCard: React.FC<TeamMember> = ({
 const TeamPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
-      image: '/images/princess.jpg',
+      image: '/images/team1.png',
       name: '양유나',
       Major: '정보보호학전공',
       Student_ID: 92113712,
@@ -69,7 +69,7 @@ const TeamPage: React.FC = () => {
       vercel: 'https://vercel.com/dashboard',
     },
     {
-      image: '/images/bmo.jpg',
+      image: '/images/team2.png',
       name: '이규한',
       Major: '정보보호학전공',
       Student_ID: 91812799,
@@ -80,7 +80,7 @@ const TeamPage: React.FC = () => {
   ]
 
   return (
-    <Flex justify="center" align="center" h="100vh">
+    <Flex justify="center" align="center" h="80vh">
       <VStack spacing={8} align="center">
         <Heading mb={4} fontSize="3xl" fontWeight="bold">
           YL2_Marketplace 프로젝트 소개
