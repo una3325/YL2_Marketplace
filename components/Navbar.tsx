@@ -23,6 +23,9 @@ const Navbar = () => {
           <Link as={NextLink} href="/sell" mx={3}>
             Sell
           </Link>
+          <Link as={NextLink} href="/creators" mx={3}>
+            creators
+          </Link>
           <Link as={NextLink} href="/about" mx={3}>
             YL2_Team
           </Link>

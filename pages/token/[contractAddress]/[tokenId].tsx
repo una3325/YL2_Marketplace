@@ -102,7 +102,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
     <Container maxW={'1200px'} p={5} my={5}>
       <SimpleGrid columns={2} spacing={6}>
         <Stack spacing={'20px'}>
-          {/* 왼쪽 박스 */}
+          {/* 왼쪽 사진 */}
           <Box borderRadius={'6px'} overflow={'hidden'}>
             <Skeleton isLoaded={!loadingMarketplace && !loadingDirectListing}>
               <ThirdwebNftMedia
@@ -112,13 +112,12 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
               />
             </Skeleton>
           </Box>
-          {/* 오른쪽 박스 */}
+          {/*왼쪽박스 */}
           <Box>
             <Text fontWeight={'bold'}>Description:</Text>
             <Text>{nft.metadata.description}</Text>
           </Box>
           <Box>
-            <Text fontWeight={'bold'}>Traits:</Text>
             <SimpleGrid columns={2} spacing={4}>
               {Object.entries(nft?.metadata?.attributes || {}).map(
                 ([key, value]) => (

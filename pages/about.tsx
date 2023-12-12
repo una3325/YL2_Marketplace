@@ -29,6 +29,7 @@ const TeamMemberCard: React.FC<TeamMember> = ({
       width="300px"
       margin={4}
       textAlign="center"
+      bg="linear-gradient(to right,  #f0f8ff,#e6e6fa)"
     >
       <Image
         src={image}
@@ -73,7 +74,7 @@ const TeamPage: React.FC = () => {
       name: '이규한',
       Major: '정보보호학전공',
       Student_ID: 91812799,
-      role: 'Backend Developer',
+      role: 'NFT마켓 개발',
       github: 'https://github.com/gyuholee',
       vercel: 'nn',
     },

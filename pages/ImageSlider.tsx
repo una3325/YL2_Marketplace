@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Container, Flex, Image, Text, IconButton } from '@chakra-ui/react'
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+// import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 interface ImageSliderProps {
   images: string[]
