@@ -1,15 +1,15 @@
 import React from 'react'
 import {
   NFT_COLLECTION_ADDRESS,
-  NFT_COLLECTION_ADDRESS_2,
-  NFT_COLLECTION_ADDRESS_3,
+  // NFT_COLLECTION_ADDRESS_2,
+  // NFT_COLLECTION_ADDRESS_3,
 } from '../const/addresses'
 import { Box, Heading, Text, VStack } from '@chakra-ui/react'
 
 const collectionData = [
   { name: 'Dog Collection', address: NFT_COLLECTION_ADDRESS },
-  { name: 'Cat Collection', address: NFT_COLLECTION_ADDRESS_2 },
-  { name: 'Robot Collection', address: NFT_COLLECTION_ADDRESS_3 },
+  // { name: 'Cat Collection', address: NFT_COLLECTION_ADDRESS_2 },
+  // { name: 'Robot Collection', address: NFT_COLLECTION_ADDRESS_3 },
 ]
 
 const CollectionList = () => {
