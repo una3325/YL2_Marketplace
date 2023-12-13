@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Container, Flex, Image, Text, IconButton } from '@chakra-ui/react'
-// import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 interface ImageSliderProps {
   images: string[]
@@ -15,17 +14,14 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
     )
   }
 
-  const handleNext = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
-  }
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext()
-    }, 3000)
+    const handleNext = () => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }
+    const interval = setInterval(handleNext, 3000)
 
     return () => clearInterval(interval)
-  }, [currentImageIndex])
+  }, [currentImageIndex, images.length])
 
   return (
     <>
@@ -47,13 +43,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
         bottom="60px" // 하단 여백
       >
         <Flex>
-          {/* <IconButton
-            onClick={handlePrev}
-            icon={<IoIosArrowBack />}
-            aria-label="Previous"
-            fontSize="20px"
-            mr="2"
-          /> */}
           {[...Array(images.length)].map((_, index) => (
             <Text
               key={index}
@@ -67,12 +56,6 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
               &#8226;
             </Text>
           ))}
-          {/* <IconButton
-            onClick={handleNext}
-            icon={<IoIosArrowForward />}
-            aria-label="Next"
-            fontSize="20px"
-          /> */}
         </Flex>
       </Flex>
     </>
