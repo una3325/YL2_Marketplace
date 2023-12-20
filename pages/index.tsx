@@ -12,14 +12,14 @@ import {
 import { useContract, useNFTs } from '@thirdweb-dev/react'
 import { NFT_COLLECTION_ADDRESS } from '../const/addresses'
 import NFTGrid from '../components/NFTGrid'
-import ImageSlider from './ImageSlider'
+// import ImageSlider from './ImageSlider'
 
-const images = [
-  '/images/web1.webp',
-  '/images/web4.webp',
-  '/images/web3.webp',
-  '/images/web2.webp',
-]
+// const images = [
+//   '/images/web1.webp',
+//   '/images/web4.webp',
+//   '/images/web3.webp',
+//   '/images/web2.webp',
+// ]
 
 const Home: NextPage = () => {
   const { contract } = useContract(NFT_COLLECTION_ADDRESS)
@@ -31,11 +31,7 @@ const Home: NextPage = () => {
 
   return (
     <Container maxW={'100%'} p={0}>
-      <Box color="white" textAlign="center" py={4} maxHeight={100}>
-        <Heading fontSize="4xl" fontWeight="bold">
-          NFT마켓 플레이스 설명... 넣을까 말까
-        </Heading>
-      </Box>
+      <Box color="white" textAlign="center" py={4} maxHeight={100}></Box>
       <Flex
         direction="column"
         align="center"
@@ -43,7 +39,7 @@ const Home: NextPage = () => {
         minHeight="100vh"
       >
         <Stack spacing={8} align={'center'} textAlign={'center'}>
-          <ImageSlider images={images} />
+          {/* <ImageSlider images={images} /> */}
           <Heading fontSize="4xl" fontWeight="bold" mt={4}>
             Welcome to YL2_Marketplace
           </Heading>
